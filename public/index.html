@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="shorten">
+   <body>
+    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href = "public/style.css">
+      <div class="container" id="enterHere" ng-controller="shortenController">
+        <h1>Enter URL</h1>
+        <input placeholder="Enter URL here" ng-model="urlToShorten">
+        <a class="btn btn-primary" ng-href ="/new/{{urlToShorten}}">Get ShortURL</a>
+        <br><br>
+        <p>
+         Enter a URL into the input box, or go to https://url-shortener-fcc-presnell.glitch.me/new/*URL HERE*
+       </p>
+      </div>
+     <div class="container">
+       <h1>
+         Example Usage:
+       </h1>
+       <p>
+         https://url-shortener-fcc-presnell.glitch.me/new/www.google.com
+       </p>
+       <p>
+         Return Object: {"originalURL":"http://www.google.com","shortURL":"4220","_id":"597376965154886933276d38"}
+       </p>
+       <p>
+         To use this short URL, direct your browser to to https://url-shortener-fcc-presnell.glitch.me/4220
+       </p>
+     </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+     <script src = "public/app.js"></script>
+   </body>
+
+</html>
+ 
